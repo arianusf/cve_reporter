@@ -1,0 +1,30 @@
+footer{
+    background-color: rgb(42, 45, 54);
+    height: 5vh;
+    color: white;
+    padding-top: 3px;
+}
+#header{
+    height: 300px;
+}
+#results{
+    height: calc(95vh - 300px);
+    overflow-y: scroll;
+}
+textarea{
+    width: 100%;
+    min-height: calc(95vh - 370px);
+}
+.pointer:hover{
+    cursor: pointer;
+}
+.text-center {
+    text-align: center !important;
+}
+.card-body {
+    padding: 0.25rem;
+}
+#results{
+    border-top: 1px solid #aaaaaa;
+    background-color: #f8f8f8;
+}
