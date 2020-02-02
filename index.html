@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CVE REPORTER v1</title>
+    <script src="dist/main.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <style>
+        a {
+            line-height: 25px;
+            color: #2e6da4;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="text-center">CVE REPORTER v1</h1>
+        <div id="form-box" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group my-3">
+                        <input id="product-name" type="text" class="form-control"
+                            placeholder="Product Name(example: linux_kernel)" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button id="product-set" class="btn btn-outline-secondary" type="button">Set</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="input-group my-3">
+                        <input id="year-name" type="text" class="form-control"
+                            placeholder="CVE Year(example: 2010, 2011)" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button id="year-set" class="btn btn-outline-secondary" type="button">Set</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">get cve list with all detail</h5>
+                            <button id="get-product-list-full" class="btn btn-primary">Proccess</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">get cve list</h5>
+                            <button id="get-product-list" class="btn btn-primary">Proccess</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">get cve report by selected year</h5>
+                            <button id="get-year-report" class="btn btn-primary">Proccess</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">get cve attack(access) info by year</h5>
+                            <button id="get-cve-attack" class="btn btn-primary">Proccess</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="results">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="pt-2">
+                        <h2 class="float-left">Result Json: </h2> <span class="badge badge-secondary float-right p-2 mt-2 pointer" id="prettyPrint">beautify</span>
+                        <textarea id="result-textarea" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pt-2">
+                        <h2>Result Info:</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item active"><span>product name: </span><span
+                                    id="label-product"></span></li>
+                            <li class="list-group-item"><span>result year: </span><span id="label-year"></span></li>
+                            <li class="list-group-item"><span>result count: </span><span id="label-count"></span></li>                 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="text-center">
+        by <a href="ariana-design.ir">Arian Yousefzadeh</a>
+    </footer>
+</body>
+
+</html>
